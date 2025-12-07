@@ -29,21 +29,15 @@ const About = () => {
       className=" min-h-screen w-screen flex flex-col items-center"
     >
       <div className="relative">
-        <h2 className="uppercase font-general mt-36 mb-10 text-xl">
+        <h2 className="uppercase text-center font-general mt-36 mb-10 text-xl">
           welcome to zentry
         </h2>
 
-        <div className="special-font text-5xl uppercase text-center leading-[0.8] mb-8">
-          disc <b>o</b> ver the world's <br /> largest shared <b>a</b>dventure,
-        </div>
-
         <AnimatedTitle
-          Title={
-            "disc <b>o</b> ver the world's <br /> largest shared <b>a</b>dventure,"
+          title={
+            "disc<b>o</b>ver the world's <br /> largest shared <b>a</b>dventure,"
           }
-          ContainerClass={
-            "special-font text-5xl uppercase text-center leading-[0.8] mb-8"
-          }
+          ContainerClass="my-5 !text-black text-center"
         />
 
         <footer className="about-subtext">
@@ -58,7 +52,7 @@ const About = () => {
         </footer>
       </div>
 
-      <div id="clip" className="h-dvh w-screen ">
+      <div id="clip" className="!h-dvh w-screen ">
         <div className="mask-clip-path about-image">
           <img
             src="img/about.webp"

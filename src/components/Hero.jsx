@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
-
+  const [prevVideo, setPrevVideo] = useState(1);
   const [loading, setLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
@@ -31,7 +31,7 @@ const Hero = () => {
 
   const handleMiniVdClick = () => {
     setHasClicked(true);
-
+    setPrevVideo(currentIndex);
     setCurrentIndex((prevIndex) => (prevIndex % totalVideos) + 1);
   };
 
@@ -129,9 +129,7 @@ const Hero = () => {
             onLoadedData={handleVideoLoad}
           />
           <video
-            src={getVideoSrc(
-              currentIndex === totalVideos - 1 ? 1 : currentIndex
-            )}
+            src={getVideoSrc(prevVideo)}
             autoPlay
             loop
             muted
