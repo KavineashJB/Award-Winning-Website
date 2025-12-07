@@ -46,7 +46,7 @@ const Hero = () => {
           height: "100%",
           duration: 1,
           ease: "power1.inOut",
-          onStart: () => nextVdRef.current.play(),
+          // onStart: () => nextVdRef.current.play(),
         });
         gsap.from("#current-video", {
           transformOrigin: "center center",
@@ -130,7 +130,7 @@ const Hero = () => {
           />
           <video
             src={getVideoSrc(prevVideo)}
-            autoPlay
+            // autoPlay
             loop
             muted
             className="absolute left-0 top-0 size-full object-cover object-center"
